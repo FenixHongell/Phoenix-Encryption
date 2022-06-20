@@ -139,6 +139,12 @@ const options = yargs
     type: "string",
     demandOption: true,
   })
+  .option("l", {
+    alias: "letters-only",
+    describe: "Letters only?",
+    type: "boolean",
+    demandOption: true,
+  })
   .option("u", {
     alias: "useHash",
     describe: "use hash on keys",
@@ -151,6 +157,7 @@ const options = yargs
     type: "string",
     demandOption: false,
   })
+
   .option("debug", {
     alias: "debug-code",
     describe: "Debug option",
