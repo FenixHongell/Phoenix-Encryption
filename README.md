@@ -15,9 +15,9 @@ Phoenix Encryption was created by me Fenix Hongell as a flexible light-weight en
 ## FAQ
 
 - Q: What is a hash code?
-  A: A hash code is a personal code added to the hash of keys. This is useful for making it harder to identify the keys for anyone whom isn't supposed to.
+- A: A hash code is a personal code added to the hash of keys. This is useful for making it harder to identify the keys for anyone whom isn't supposed to.
 - Q: What does the letters only option do?
-  A: If the letters only option is selected only letters will be used in the encryption, depending on the text it may make it more secure.
+- A: If the letters only option is selected only letters will be used in the encryption, depending on the text it may make it more secure.
 
 ## Usage
 
