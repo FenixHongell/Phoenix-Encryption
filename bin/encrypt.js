@@ -3,10 +3,15 @@
 import yargs from "yargs";
 import fs from "fs";
 import sha256 from "js-sha256";
-function writeEncryption(content, useHash, hashCode, debug) {
+function writeEncryption(content, useHash, hashCode, debug, lettersOnly) {
   //All characters in encryption
-  let charList =
-    "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+  let charList;
+  if (lettersOnly) {
+    charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  } else {
+    charList =
+      "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+  }
   let keys = []; //Keys of encryption
   let mainString = []; //Main string
   //#region Basic Generation
