@@ -194,5 +194,5 @@ try {
 }
 
 console.log(
-  "DISCLAIMER: Due to the nature of the algorithm some times the encryption may be less, if you are not satisfied with the result just run the command again."
+  "DISCLAIMER: Due to the nature of the algorithm some times the encryption may be less secure, if you are not satisfied with the result just run the command again."
 );
