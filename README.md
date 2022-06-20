@@ -12,4 +12,6 @@ Phoenix Encryption was created by me Fenix Hongell as a flexible light-weight en
 
 ### Install using npm:
 
+1. Run `npm -g install URL_HERE`
+
 ## Usage
