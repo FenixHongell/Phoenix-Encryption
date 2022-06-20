@@ -10,7 +10,7 @@ function writeEncryption(content, useHash, hashCode, debug, lettersOnly) {
     charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   } else {
     charList =
-      "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+      "!#$%'()+,-.0123456789:;<=>@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{}~";
   }
   let keys = []; //Keys of encryption
   let mainString = []; //Main string
@@ -144,15 +144,15 @@ const options = yargs
     type: "string",
     demandOption: true,
   })
-  .option("l", {
-    alias: "letters-only",
-    describe: "Letters only?",
-    type: "boolean",
-    demandOption: true,
-  })
   .option("u", {
     alias: "useHash",
     describe: "use hash on keys",
+    type: "boolean",
+    demandOption: true,
+  })
+  .option("l", {
+    alias: "letters-only",
+    describe: "Letters only?",
     type: "boolean",
     demandOption: true,
   })
@@ -162,7 +162,6 @@ const options = yargs
     type: "string",
     demandOption: false,
   })
-
   .option("debug", {
     alias: "debug-code",
     describe: "Debug option",
@@ -183,7 +182,8 @@ try {
       fs.readFileSync(options.file).toString(),
       options.useHash,
       hc,
-      options.debug
+      options.debug,
+      options.l
     )
   );
 } catch (error) {
